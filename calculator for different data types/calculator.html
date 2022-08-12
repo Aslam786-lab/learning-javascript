@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>calculator</title>
+  <script src="calculator.js" charset="utf-8"></script>
+  <style>
+    label {
+      width: 150px;
+      display: inline-block;
+      padding: 10px;
+    }
+
+    button {
+      padding: 0px 15px;
+      margin: 14px 135px;
+      border-radius: 10px;
+
+    }
+
+    h2,p{
+      text-align: center;
+      color: red;
+      font-size: xx-large;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Welcome to Datatype Calculator</h1>
+  <label>Enter the first input</label>
+  <input type="text" id="input1">
+  <br>
+
+  <label>Enter the second input</label>
+  <input type="text" id="input2">
+  <br>
+  <button type="button" onclick="getInputType()">click</button>
+  <br>
+  <br>
+  <hr>
+  <h2 id="result"></h2>
+  <p id="inputResult"></p>
+</body>
+
+
+</html>
