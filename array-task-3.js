@@ -27,11 +27,11 @@ const array = [1,2,3,4,5,6,7,8,8,9];
 const range = 3
 
 let result = splitArray(array,range);
-result()
-result()
-result()
-result()
-result()
+result()    //[ 1, 2, 3 ]
+result()    //[ 4, 5, 6 ]
+result()    //[ 7, 8, 8 ]
+result()    //[ 9, 1, 2 ]
+result()    //[ 3, 4, 5 ]
 
-result()
-result()
+result()    //[ 6, 7, 8 ]
+result()    //[ 8, 9, 1 ]
