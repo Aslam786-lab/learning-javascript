@@ -64,16 +64,31 @@ function createDataP(newData){
    })                            
 }
 
+function concatP(){
+    let str =""
+    for(let i=0;i<data.length;i++){
+        str+=data[i].name+"-"
+    }
+    return str.slice(0,str.length-1)
+}
+
 function getDataP(){
-    setTimeout(() =>{
-        for(let i=0;i<data.length;i++){
-            console.log(data[i].name);
-        }
-    },1000)
+    return new Promise((resolve,reject) =>{
+
+        setTimeout(() =>{
+            for(let i=0;i<data.length;i++){
+                console.log(data[i].name);
+            }
+            resolve()
+        },1000)
+
+    })
+   
 }
 
 // createDataP({name : "Noel", age: 28})
 // .then(getDataP)
+// .then(() => console.log(concatP()))
 // .catch(err => console.log(err))
 
 /*
@@ -87,7 +102,9 @@ Noel
 
 async function start(){
     await createDataP({name : "Noel", age: 28})
-    getDataP()
+    await getDataP()
+    console.log(concatP());
+    
 }
 
 start()
