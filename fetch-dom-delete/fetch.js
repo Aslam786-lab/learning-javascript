@@ -7,7 +7,11 @@ const deleteButton = document.querySelector(".delete")
 
 fetch(url)
 .then((response) =>{
-    return response.json()
+    if(response.ok){
+        return response.json()
+    }
+    throw new Error("something went wrong")
+    
 })
 .then((data)=>{
     const table =`<table class="table">
@@ -30,6 +34,8 @@ fetch(url)
     </table>`
 
     document.querySelector("#table").innerHTML = table;
+}).catch((error) =>{
+    console.log(error);
 })
 
 
