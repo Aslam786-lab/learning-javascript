@@ -86,3 +86,4 @@ const deleted = async() =>{
     })
 }
 
+deleted()
