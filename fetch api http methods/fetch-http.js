@@ -1,4 +1,5 @@
-url = "https://jsonplaceholder.typicode.com/posts/1";
+
+const url = "https://jsonplaceholder.typicode.com/posts";
 
 
 //using promises
@@ -15,17 +16,20 @@ url = "https://jsonplaceholder.typicode.com/posts/1";
 
 
 //POST method - ID will be automaticaly updated
-// fetch(url,{
-//     method: "POST",
-//     headers: {'content-type': 'application/json'},
-//     body: JSON.stringify({
-//         title: 'Food',
-//         body:  'Humans required food to survive',
-//         userId: 1,
-//     })
-// })
-// .then(response => response.json())
-// .then(data => console.log(data))
+fetch(url,{
+    method: "POST",
+    headers: {'content-type': 'application/json'},
+    body: JSON.stringify({
+        title: 'Food',
+        body:  'Humans required food to survive',
+        userId: 1,
+    })
+})
+.then(response => response.json())
+.then(data => console.log(data))
+
+
+
 
 
 
@@ -86,4 +90,4 @@ const deleted = async() =>{
     })
 }
 
-deleted()
+// deleted()

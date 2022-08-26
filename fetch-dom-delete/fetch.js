@@ -14,6 +14,7 @@ fetch(url)
     
 })
 .then((data)=>{
+
     const table =`<table class="table">
         <thead>
             <tr>
