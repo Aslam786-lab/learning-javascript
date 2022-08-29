@@ -38,3 +38,28 @@ function infAdd(a){
 const var2= (a) => (b) => (b) ? var2(a+b) : a;
 
 console.log(infAdd(2)(3)(8)(9)())
+
+
+
+
+
+
+
+//curring helps to avoid the same variable again and again
+
+function sum(op) {
+    return function (b) {
+        return function (c) {
+            if(op === '+') return b+c;
+            else if(op === '*') return b*c;
+            else if(op === '-') return b-c;
+            else if(op === '/') return b/c;
+            
+        }
+    }
+}
+
+const res=sum('+')             
+
+console.log(res(4)(6))         //by only one time assigning + we can call the function multiple times 
+console.log(res(8)(8))         //with different value
