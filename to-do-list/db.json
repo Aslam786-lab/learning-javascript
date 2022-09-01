@@ -1,0 +1,20 @@
+{
+  "todo": [
+    {
+      "text": "Yoga",
+      "id": 1
+    },
+    {
+      "text": "Meditation",
+      "id": 2
+    },
+    {
+      "text": "Office Work",
+      "id": 3
+    },
+    {
+      "text": "Lunch",
+      "id": 4
+    }
+  ]
+}
